@@ -1,0 +1,79 @@
+body {
+    height: 98vh;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, .6);
+}
+
+.mainbar {
+    display: grid;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: .5rem;
+}
+
+.mainbar > * {
+    background: rgba(218, 255, 6, 0.473);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.mainbar header {
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+
+.mainbar nav {
+    grid-column: 1/4;
+    grid-row: 4/5;
+}
+
+.mainbar main {
+    grid-column: 1/3;
+    grid-row: 5/10;
+}
+
+.mainbar aside {
+    grid-column: 3/4;
+    grid-row: 5/10;
+}
+
+.mainbar footer {
+    grid-column: 1/4;
+    grid-row: 10/12;
+}
+
+@media screen and (max-width: 600px) {
+    .mainbar nav {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    } 
+    .mainbar header {
+        grid-column: 1/4;
+        grid-row: 2/4;
+    }
+
+    .mainbar main {
+        grid-column: 1/4;
+        grid-row: 4/10;
+    }
+
+    .mainbar aside {
+        grid-column: 1/4;
+        grid-row: 10/13
+    }
+
+    .mainbar footer {
+        grid-column: 1/4;
+        grid-row: 13/14;
+    }
+       
+}
